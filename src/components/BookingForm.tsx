@@ -11,7 +11,8 @@ const bookingSchema = z.object({
   dogName: z.string().min(1, "Required"),
   breed: z.string().min(1, "Required"),
   matted: z.enum(["Yes", "No"]),
-  emaciated: z.enum(["Yes", "No"]),
+  overweight: z.enum(["Yes", "No"]),
+  underweight: z.enum(["Yes", "No"]),
   notes: z.string().optional(),
 });
 
@@ -48,8 +49,16 @@ export default function BookingForm() {
       </div>
 
       <div>
-        <label className="block mb-1 text-gray-700">Is your dog emaciated?</label>
-        <select {...register("emaciated")} className="input">
+        <label className="block mb-1 text-gray-700">Is your dog overweight?</label>
+        <select {...register("overweight")} className="input">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label className="block mb-1 text-gray-700">Is your dog underweight?</label>
+        <select {...register("underweight")} className="input">
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>

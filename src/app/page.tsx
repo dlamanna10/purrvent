@@ -11,7 +11,7 @@ export default function Home() {
         height={120}
         priority
       />
-      <h1 className="text-5xl font-bold text-blue-900">Grooming with Care</h1>
+      <h1 className="text-5xl font-bold text-blue-900">Welcome to Purrvent!</h1>
       <p className="text-lg text-blue-500 max-w-md">
         Book your next dog grooming appointment easily online.
       </p>
