@@ -3,9 +3,10 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white flex flex-col">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-12 py-6 text-gray-700 text-sm">
+    <main className="min-h-screen bg-white flex flex-col font-bookmania">
+
+      {/* Sticky Navbar */}
+      <nav className="sticky top-0 bg-white z-50 flex items-center justify-between px-12 py-6 text-gray-700 text-sm border-b border-orange-600">
         <div className="text-2xl font-bold text-orange-600">Purrvent</div>
         <div className="space-x-6">
           <Link href="#" className="hover:text-orange-500">Locations</Link>
@@ -15,7 +16,7 @@ export default function Home() {
             href="/booking"
             className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-5 rounded-lg text-sm"
           >
-            Our Form
+            Interest Form
           </Link>
         </div>
       </nav>
@@ -27,26 +28,36 @@ export default function Home() {
             Dog Grooming, but better.
           </h1>
           <p className="text-gray-500 text-lg">
-            With Purrvent, you come first.
+            With Purrvent, everyone's happy.
           </p>
           <Link
             href="/booking"
             className="bg-orange-600 hover:bg-orange-700 text-white text-lg font-semibold py-3 px-6 rounded-xl transition"
           >
-            Our Booking Form
+            Check It Out
           </Link>
         </div>
 
-        <div className="w-full max-w-md">
+        <div className="relative w-full md:w-1/2 h-96 md:h-[500px]">
           <Image
-            src="/dog-grooming.png"
-            alt="Dog Grooming Portal"
-            width={500}
-            height={500}
-            className="rounded-xl object-cover"
+            src="/lp1.jpg"
+            alt="Picture of my future wife."
+            fill
+            className="object-cover scale-100 rounded-xl"
+            priority
           />
         </div>
       </section>
+
+      {/* Our Goal Section */}
+      <section className="px-12 py-24 bg-gray-50 text-center space-y-6">
+        <h2 className="text-4xl font-bold text-gray-900">Our Goal</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          At Purrvent, our mission is simple — to make pet grooming easy, stress-free, and centered around care. 
+          We believe pets deserve the best experience right at home and owners deserve peace of mind knowing their furry friends are treated like family.
+        </p>
+      </section>
+
     </main>
   );
 }
