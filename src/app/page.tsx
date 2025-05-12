@@ -8,7 +8,7 @@ export default function Home() {
       {/* Sticky Navbar */}
       <nav className="sticky top-0 bg-white z-50 flex items-center justify-between px-12 py-6 text-gray-700 text-sm border-b border-orange-600">
         <div className="text-2xl font-bold text-orange-600">Purrvent</div>
-        <div className="space-x-6">
+        <div className="space-x-4 flex items-center">
           <Link href="#" className="hover:text-orange-500">Locations</Link>
           <Link href="#" className="hover:text-orange-500">Careers</Link>
           <Link href="#" className="hover:text-orange-500">Login</Link>
@@ -17,6 +17,12 @@ export default function Home() {
             className="bg-orange-600 hover:bg-orange-700 text-white py-2 px-5 rounded-lg text-sm"
           >
             Interest Form
+          </Link>
+          <Link
+            href="/dashboard"
+            className="text-gray-400 hover:text-blue-700 text-xs underline underline-offset-4 ml-3"
+          >
+            Salon Dashboard
           </Link>
         </div>
       </nav>
